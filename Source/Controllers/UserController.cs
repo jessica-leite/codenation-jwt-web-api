@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using Codenation.Challenge.DTOs;
 using Codenation.Challenge.Models;
 using Codenation.Challenge.Services;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Codenation.Challenge.Controllers
 {
+    [Authorize(Policy = "Admin")]
     [Route("api/[controller]")]    
     [ApiController]
     public class UserController : ControllerBase
